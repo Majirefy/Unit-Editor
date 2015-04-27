@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.Long?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<BorderPane fx:controller="org.augix.ue.controller.SettingsController" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/null">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <center>
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                  prefWidth="540.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="100.0" percentWidth="25"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" percentWidth="65"/>
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="50.0" percentWidth="10"/>
+            </columnConstraints>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <vgap>
+                <Long fx:value="5"/>
+            </vgap>
+            <hgap>
+                <Long fx:value="5"/>
+            </hgap>
+            <children>
+                <Label text="Unit Name Location:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                       GridPane.halignment="RIGHT"></Label>
+                <TextField fx:id="unitNameLocationTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                           editable="false"></TextField>
+                <Button fx:id="unitNameButton" text="…" GridPane.columnIndex="2" GridPane.rowIndex="0"
+                        GridPane.halignment="CENTER" onAction="#chooseLocation"></Button>
+                <Label text="Unit Image Location:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                       GridPane.halignment="RIGHT"></Label>
+                <TextField fx:id="unitImageLocationTextField" GridPane.columnIndex="1"
+                           GridPane.rowIndex="1" editable="false"></TextField>
+                <Button fx:id="unitImageButton" text="…" GridPane.columnIndex="2" GridPane.rowIndex="1"
+                        GridPane.halignment="CENTER" onAction="#chooseLocation"></Button>
+                <Label text="Unit Data Location:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+                       GridPane.halignment="RIGHT"></Label>
+                <TextField fx:id="unitDataLocationTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                           editable="false"></TextField>
+                <Button fx:id="unitDataButton" text="…" GridPane.columnIndex="2" GridPane.rowIndex="2"
+                        GridPane.halignment="CENTER" onAction="#chooseLocation"></Button>
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox GridPane.columnSpan="3" spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="3"
+              alignment="CENTER_RIGHT">
+            <Button text="OK" onAction="#saveSettings" fx:id="test" defaultButton="true"></Button>
+            <Button text="Cancel" onAction="#cancel" cancelButton="true"></Button>
+        </HBox>
+    </bottom>
+</BorderPane>
+
