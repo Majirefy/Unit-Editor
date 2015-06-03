@@ -108,10 +108,18 @@ public class MainController implements Initializable {
             unitToggleButtons[i].setId(String.valueOf(i));
             unitToggleButtons[i].setGraphic(toggleImage);
             unitToggleButtons[i].setToggleGroup(unitGalleryToggleGroup);
-            unitToggleButtons[i].setOnAction(event -> {
-                int unitIndex = Integer.parseInt(((ToggleButton) event.getSource()).getId());
-                this.unitIndex = unitIndex;
-                reloadData(unitIndex);
+//            unitToggleButtons[i].setOnAction(event -> {
+//                int unitIndex = Integer.parseInt(((ToggleButton) event.getSource()).getId());
+//                this.unitIndex = unitIndex;
+//                reloadData(unitIndex);
+//            });
+            unitToggleButtons[i].setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    int index = Integer.parseInt(((ToggleButton) event.getSource()).getId());
+                    unitIndex = index;
+                    reloadData(unitIndex);
+                }
             });
             toggleImage.imageProperty().bind(Bindings.when(unitToggleButtons[i].selectedProperty()).
                     then(images.get(i)).otherwise(images.get(i)));
