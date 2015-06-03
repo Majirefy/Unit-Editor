@@ -1,7 +1,6 @@
 package org.augix.ue.controller;
 
 import javafx.beans.binding.Bindings;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
@@ -11,8 +10,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import org.augix.ue.model.*;
 import org.augix.ue.ui.NumericTextField;
@@ -22,7 +19,6 @@ import org.augix.ue.util.UnitDataFactory;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -72,7 +68,7 @@ public class MainController implements Initializable {
     @FXML
     private NumericTextField maximumAttackRangeTextField;
     @FXML
-    private ComboBox attackTypeComboBox;
+    private ComboBox<String> attackTypeComboBox;
 
     @FXML
     private ListView allAbilityListView;
@@ -116,8 +112,7 @@ public class MainController implements Initializable {
             unitToggleButtons[i].setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    int index = Integer.parseInt(((ToggleButton) event.getSource()).getId());
-                    unitIndex = index;
+                    unitIndex = Integer.parseInt(((ToggleButton) event.getSource()).getId());
                     reloadData(unitIndex);
                 }
             });
