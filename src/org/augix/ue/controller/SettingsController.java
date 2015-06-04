@@ -12,6 +12,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import org.augix.ue.model.Settings;
 import org.augix.ue.model.SettingsProvider;
+import org.augix.ue.view.ViewLoadHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -80,7 +81,8 @@ public class SettingsController implements Initializable {
 
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("../view/mainForm.fxml"));
+//            root = FXMLLoader.load(getClass().getResource("../view/mainForm.fxml"));
+            root = FXMLLoader.load(ViewLoadHelper.class.getResource("mainForm.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Unit Editor");
             stage.setResizable(false);

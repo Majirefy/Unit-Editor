@@ -40,6 +40,7 @@ public class Ability {
     private static Map<String, Integer> abilityIndexMap = new HashMap<>();
 
     public static final ObservableList getAllAbilityNamesList() {
+        allAbilityNamesList.clear();
         allAbilityNamesList.addAll("Conqueror", "Fighter of the Sea", "Fighter of the Forest", "Fighter of the Mountain",
                 "Destroyer", "Air Force", "Necromancer", "Healer", "Charger", "Poisoner", "Repairer", "Terror Gaze", "Marksman",
                 "Son of the Sea", "Son of the Forest", "Son of the Mountain", "Crawler", "Slowing Gaze", "Commander", "Siege Machine",

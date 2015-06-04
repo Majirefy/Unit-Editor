@@ -14,7 +14,7 @@ public class UnitDataFactory {
     private static final String UNIT_DATA_FILE_PREFIX = "/unit_";
     private static final String UNIT_DATA_FILE_SUFFIX = ".dat";
 
-    private static final String UNIT_NAME_FILE = "/en.lang";
+    private static final String UNIT_NAME_FILE = "/lang.dat";
 
     /**
      * Read unit data from file by unit index.

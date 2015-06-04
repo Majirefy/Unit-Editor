@@ -26,19 +26,19 @@
                         <RowConstraints vgrow="NEVER" minHeight="100" prefHeight="100"></RowConstraints>
                     </rowConstraints>
                     <children>
-                        <ImageView fx:id="level0ImageView" accessibleText="Level 0" cache="true" fitWidth="48"
+                        <ImageView fx:id="level0ImageView" cache="true" fitWidth="48"
                                    GridPane.columnIndex="0" pickOnBounds="true" GridPane.halignment="CENTER"
                                    GridPane.valignment="CENTER"
                                    preserveRatio="true"/>
-                        <ImageView fx:id="level1ImageView" accessibleText="Level 1" cache="true" fitWidth="48"
+                        <ImageView fx:id="level1ImageView" cache="true" fitWidth="48"
                                    GridPane.columnIndex="1" pickOnBounds="true" GridPane.halignment="CENTER"
                                    GridPane.valignment="CENTER"
                                    preserveRatio="true"/>
-                        <ImageView fx:id="level2ImageView" accessibleText="Level 2" cache="true" fitWidth="48"
+                        <ImageView fx:id="level2ImageView" cache="true" fitWidth="48"
                                    GridPane.columnIndex="2" pickOnBounds="true" GridPane.halignment="CENTER"
                                    GridPane.valignment="CENTER"
                                    preserveRatio="true"/>
-                        <ImageView fx:id="level3ImageView" accessibleText="Level 3" cache="true" fitWidth="48"
+                        <ImageView fx:id="level3ImageView" cache="true" fitWidth="48"
                                    GridPane.columnIndex="3" pickOnBounds="true" GridPane.halignment="CENTER"
                                    GridPane.valignment="CENTER"
                                    preserveRatio="true"/>
@@ -80,7 +80,7 @@
                                 <children>
                                     <Label text="Unit Name:" GridPane.columnIndex="0" GridPane.halignment="RIGHT"
                                            GridPane.rowIndex="0"/>
-                                    <TextField fx:id="unitNameTextField" accessibleHelp="Unit Name"
+                                    <TextField fx:id="unitNameTextField"
                                                GridPane.columnIndex="1"
                                                GridPane.rowIndex="0"/>
                                     <Label text="Unit Price:" GridPane.columnIndex="2" GridPane.halignment="RIGHT"
@@ -173,7 +173,7 @@
             </fx:define>
         </HBox>
     </bottom>
-    <opaqueInsets>
-        <Insets/>
-    </opaqueInsets>
+    <!--<opaqueInsets>-->
+        <!--<Insets/>-->
+    <!--</opaqueInsets>-->
 </BorderPane>
